@@ -246,3 +246,63 @@ const newBooks = books.filter((book)=>{
 //     }
 // ]
 
+const numm = [1,2,3,4,5]
+
+const sum = numm.reduce((accumulator,num)=>{
+    return num + accumulator
+},2)
+
+const products = [
+    {
+        product : 'A',
+        price : 200,
+        qty : 2
+    },
+    {
+        product : 'B',
+        price : 300,
+        qty : 7
+    },
+    {
+        product : 'A',
+        price : 1100,
+        qty : 8
+    }
+]
+
+const output = products.reduce((acc,product)=>{
+    acc.total = product.price * product.qty + acc.total
+    acc.totalQty = product.qty + acc.totalQty
+    return acc
+},{total : 0,totalQty:0})
+
+
+console.log(output)
+
+
+const reviews = [
+    {
+        rating : 2 
+    },
+    {
+        rating : 4
+    },
+    {
+        rating : 5
+    }
+]
+
+// make a function that accept above reviews & returns the 
+// average rating
+
+ function calculateRating(reviews){
+    const totalRating = reviews.reduce((acc,review)=>{
+        return review.rating + acc 
+    },0)
+    const averageRating = totalRating/reviews.length
+    console.log(averageRating)
+}
+  
+calculateRating(reviews)
+
+console.log(sum)
