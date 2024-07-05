@@ -127,3 +127,18 @@ function getSomething(param){
 }
 
 getSomething(data)
+
+const getSomething = (param)=>{
+    console.log(param.code[0].userId)
+    console.log(param.code[0].ipAddress)
+    console.log(param.code[0].title)
+}
+
+getSomething(function(){
+
+})
+
+getSomething(()=>{
+
+})
+
