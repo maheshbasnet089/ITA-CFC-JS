@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>JS Workshop Project</h2>
+    <div>
+        <input type="text" name="todoInput" id="todoInput" placeholder="Enter Todo">
+        <button type="submit" onclick="addTask()">Add</button>
+    </div>
+
+    <div>
+        <label for="searchInput">Search:</label>
+        <input type="text" name="searchInput" oninput="filterTasks()" id="searchInput">
+    </div>
+    <ul id="todoList"></ul>
+
+    <div>
+        <p>Total Tasks : <span id="totalTasks">0</span></p>
+        <p>Completed Tasks : <span id="completedTasks">0</span></p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
